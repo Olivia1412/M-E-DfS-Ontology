@@ -1,130 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>M&amp;E Design for Safety Ontology</title>
-  <meta name="description" content="Interactive WebVOWL visualization of the M&E Design for Safety ontology.">
-  <style>
-    :root {
-      --navy:#17324d;
-      --blue:#2f6f9f;
-      --ink:#1f2933;
-      --muted:#617182;
-      --bg:#f5f7fa;
-      --card:#ffffff;
-      --line:#dce3ea;
-    }
-    * { box-sizing:border-box; }
-    body {
-      margin:0; font-family:Inter,Segoe UI,Arial,sans-serif;
-      color:var(--ink); background:var(--bg); line-height:1.6;
-    }
-    .hero {
-      background:linear-gradient(135deg,var(--navy),#285a7f);
-      color:white; padding:56px 24px 48px;
-    }
-    .wrap { max-width:1100px; margin:auto; }
-    h1 { margin:0 0 10px; font-size:clamp(30px,5vw,48px); line-height:1.15; }
-    .subtitle { max-width:800px; margin:0; font-size:18px; opacity:.92; }
-    .content { padding:32px 24px 56px; }
-    .grid {
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px; margin-bottom:28px;
-    }
-    .card {
-      background:var(--card); border:1px solid var(--line);
-      border-radius:12px; padding:24px;
-      box-shadow:0 4px 18px rgba(23,50,77,.06);
-    }
-    h2 { color:var(--navy); margin-top:0; }
-    .buttons { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
-    a.button {
-      display:inline-block; text-decoration:none; padding:11px 17px;
-      border-radius:8px; font-weight:650; border:1px solid transparent;
-    }
-    .primary { background:white; color:var(--navy); }
-    .secondary { background:transparent; color:white; border-color:rgba(255,255,255,.55)!important; }
-    .viewer {
-      width:100%; height:760px; border:1px solid var(--line);
-      border-radius:12px; background:white;
-    }
-    .note { color:var(--muted); font-size:14px; }
-    footer { border-top:1px solid var(--line); padding-top:20px; color:var(--muted); font-size:14px; }
-    code { background:#eef2f5; padding:2px 5px; border-radius:4px; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>M&amp;E Design for Safety Ontology</title>
+<meta name="description" content="Interactive WebVOWL visualization of the M&E Design for Safety ontology.">
+<style>
+:root{--navy:#17324d;--blue:#2f6f9f;--ink:#1f2933;--muted:#617182;--bg:#f5f7fa;--card:#fff;--line:#dce3ea}
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+.hero{background:linear-gradient(135deg,var(--navy),#285a7f);color:#fff;padding:56px 24px 48px}
+.wrap{max-width:1100px;margin:auto}h1{margin:0 0 10px;font-size:clamp(30px,5vw,48px);line-height:1.15}
+.subtitle{max-width:800px;margin:0;font-size:18px;opacity:.92}.content{padding:32px 24px 56px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-bottom:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:0 4px 18px rgba(23,50,77,.06)}
+h2{color:var(--navy);margin-top:0}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+a.button{display:inline-block;text-decoration:none;padding:11px 17px;border-radius:8px;font-weight:650;border:1px solid transparent}
+.primary{background:#fff;color:var(--navy)}.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)!important}
+.viewer{width:100%;height:760px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.note{color:var(--muted);font-size:14px}footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:14px}
+code{background:#eef2f5;padding:2px 5px;border-radius:4px}
+</style>
 </head>
 <body>
-  <header class="hero">
-    <div class="wrap">
-      <h1>M&amp;E Design for Safety Ontology</h1>
-      <p class="subtitle">
-        An ontology for representing Design for Safety (DfS) knowledge associated
-        with mechanical and electrical systems in construction.
-      </p>
-      <div class="buttons">
-        <a class="button primary" href="#visualization">Explore interactive ontology</a>
-        <a class="button secondary" href="ontology/ME_DfS_Ontology.owl" download>Download OWL ontology</a>
-      </div>
-    </div>
-  </header>
+<header class="hero">
+<div class="wrap">
+<h1>M&amp;E Design for Safety Ontology</h1>
+<p class="subtitle">An ontology for representing Design for Safety (DfS) knowledge associated with mechanical and electrical systems in construction.</p>
+<div class="buttons">
+<a class="button primary" href="#visualization">Explore interactive ontology</a>
+<a class="button secondary" href="ME_DfS_Ontology.owl" download>Download OWL ontology</a>
+</div>
+</div>
+</header>
 
-  <main class="content wrap">
-    <section class="grid">
-      <div class="card">
-        <h2>Purpose</h2>
-        <p>
-          The ontology represents concepts and relationships used to support
-          knowledge-based Design for Safety analysis of M&amp;E systems,
-          activities, hazards, controls, stakeholders and related concepts.
-        </p>
-      </div>
-      <div class="card">
-        <h2>Interactive visualization</h2>
-        <p>
-          Use the WebVOWL viewer below to explore classes and relationships.
-          You can zoom, pan, search and inspect individual ontology elements.
-        </p>
-      </div>
-    </section>
+<main class="content wrap">
+<section class="grid">
+<div class="card"><h2>Purpose</h2>
+<p>The ontology represents concepts and relationships used to support knowledge-based Design for Safety analysis of M&amp;E systems, activities, hazards, controls, stakeholders and related concepts.</p></div>
+<div class="card"><h2>Interactive visualization</h2>
+<p>Use the WebVOWL viewer to explore classes and relationships. You can zoom, pan, search and inspect individual ontology elements.</p></div>
+</section>
 
-    <section id="visualization" class="card">
-      <h2>Ontology graph</h2>
-      <p class="note">
-        The visualization is provided by the WebVOWL service maintained by the
-        VisualDataWeb project. The ontology file is hosted in this repository.
-      </p>
-      <iframe
-        class="viewer"
-        title="Interactive WebVOWL visualization"
-        src="https://service.tib.eu/webvowl/#iri=https://olivia1412.github.io/M-E-DfS-Ontology/ontology/ME_DfS_Ontology.owl"
-        loading="lazy">
-      </iframe>
-      <p class="note">
-        If the graph does not load immediately, open
-        <a href="https://service.tib.eu/webvowl/#iri=https://olivia1412.github.io/M-E-DfS-Ontology/ontology/ME_DfS_Ontology.owl" target="_blank" rel="noopener">WebVOWL in a new tab</a>.
-      </p>
-    </section>
+<section id="visualization" class="card">
+<h2>Ontology graph</h2>
+<p class="note">The visualization is provided by the WebVOWL service maintained by the VisualDataWeb project.</p>
+<iframe class="viewer" title="Interactive WebVOWL visualization"
+src="https://service.tib.eu/webvowl/#iri=https://olivia1412.github.io/M-E-DfS-Ontology/ME_DfS_Ontology.owl"
+loading="lazy"></iframe>
+<p class="note">
+If the embedded viewer is blocked by your browser, use
+<a href="https://service.tib.eu/webvowl/#iri=https://olivia1412.github.io/M-E-DfS-Ontology/ME_DfS_Ontology.owl" target="_blank" rel="noopener">WebVOWL in a new tab</a>.
+</p>
+</section>
 
-    <section class="card" style="margin-top:20px;">
-      <h2>Ontology resource</h2>
-      <p>
-        <strong>Ontology file:</strong>
-        <a href="ontology/ME_DfS_Ontology.owl">ME_DfS_Ontology.owl</a>
-      </p>
-      <p>
-        <strong>Ontology IRI:</strong>
-        <code>http://www.semanticweb.org/me-dfs</code>
-      </p>
-      <p class="note">
-        The ontology IRI is retained from the supplied OWL file. The GitHub Pages
-        URL is used as the public location of this published copy.
-      </p>
-    </section>
+<section class="card" style="margin-top:20px">
+<h2>Ontology resource</h2>
+<p><strong>Ontology file:</strong> <a href="ME_DfS_Ontology.owl">ME_DfS_Ontology.owl</a></p>
+<p><strong>Public ontology URL:</strong> <code>https://olivia1412.github.io/M-E-DfS-Ontology/ME_DfS_Ontology.owl</code></p>
+<p><strong>Ontology IRI:</strong> <code>http://www.semanticweb.org/me-dfs</code></p>
+</section>
 
-    <footer>
-      M&amp;E Design for Safety Ontology · Interactive research artifact
-    </footer>
-  </main>
+<footer>M&amp;E Design for Safety Ontology · Interactive research artifact</footer>
+</main>
 </body>
 </html>
