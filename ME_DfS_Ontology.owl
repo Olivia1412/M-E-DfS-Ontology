@@ -438,6 +438,7 @@
     </owl:Class>
     <owl:Class rdf:about="#Emergency_fire_engine_access_obstructed">
         <rdfs:subClassOf rdf:resource="#Design_deficiency_BIM"/>
+    </owl:Class>
     <owl:Class rdf:about="#Live_part_within_casual_reach">
         <rdfs:subClassOf rdf:resource="#Design_deficiency_BIM"/>
     </owl:Class>
